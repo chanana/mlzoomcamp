@@ -1,0 +1,8 @@
+FROM agrigorev/zoomcamp-model:2025
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+ENV PATH="/code/.venv/bin:$PATH"
+COPY "pyproject.toml" "uv.lock" ".python-version" ./
+COPY "./notebooks/05-deployment/predict.py" ./
+RUN uv sync --locked
+EXPOSE 9696
+ENTRYPOINT ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "9696"]
