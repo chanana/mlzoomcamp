@@ -1,6 +1,12 @@
 import requests
+import os
 
-url = "http://localhost:9696/predict"
+# Public Cloud Run endpoint
+# To test locally, use: export TEST_URL=http://localhost:9696
+CLOUD_URL = "https://wine-quality-predictor-933028008008.us-central1.run.app/predict"
+
+url = os.getenv("TEST_URL", CLOUD_URL)
+print(f"🧪 Testing Wine Quality Predictor at: {url}\n")
 wines = [
     {
         "fixed_acidity": 7.6,
