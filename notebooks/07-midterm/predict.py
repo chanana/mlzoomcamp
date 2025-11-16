@@ -53,7 +53,7 @@ curl -X 'POST' \
 @app.post("/predict")
 def predict(wine: Wine) -> PredictResponse:
     y_pred = predict_single(wine)
-    return {"quality": float(y_pred[0])}
+    return {"quality": round(float(y_pred[0]), 0)}
 
 
 if __name__ == "__main__":

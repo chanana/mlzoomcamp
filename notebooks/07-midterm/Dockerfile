@@ -21,8 +21,11 @@ COPY pyproject.toml uv.lock .python-version ./
 # Install dependencies exactly as locked in uv.lock, without updating them
 RUN uv sync --locked
 
-# Copy application code and model data into the container
-COPY notebooks/07-midterm/predict.py notebooks/07-midterm/model.bin ./
+# Copy model first (changes less frequently, better caching)
+COPY notebooks/07-midterm/model.bin ./
+
+# Copy application code last (changes more frequently)
+COPY notebooks/07-midterm/predict.py ./
 
 # Expose TCP port 9696 so it can be accessed from outside the container
 EXPOSE 9696

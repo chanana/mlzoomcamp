@@ -2,41 +2,21 @@
 
 A machine learning service that predicts the quality of red wine based on physicochemical properties using XGBoost regression.
 
-## 🍷 Problem Description
+## Problem
 
 ### The Challenge
 
-Wine quality assessment traditionally relies on expert sommeliers and lengthy tasting panels, which are:
-- **Time-consuming**: Manual evaluation can take days or weeks for large batches
-- **Expensive**: Expert tasters are costly and not always available
-- **Subjective**: Human ratings can vary between tasters and over time
-- **Scalability issues**: Cannot efficiently evaluate large production volumes
+Wine quality assessment traditionally relies on expert sommeliers and lengthy tasting panels, which are, time-consuming, expensives, subjective, and have scalability issues.
 
 ### The Solution
 
 This machine learning service provides **instant, objective wine quality predictions** based on measurable chemical properties that can be obtained through standard laboratory analysis. The model predicts quality scores (1-10 scale) using 11 physicochemical features.
 
 ### Use Cases
-
-#### 1. **Wine Production & Quality Control**
-- **During fermentation**: Monitor quality trends in real-time to adjust production parameters
-- **Batch evaluation**: Quickly assess entire batches before bottling
-- **Quality gates**: Automatically flag wines that don't meet quality thresholds
-
-#### 2. **Winery Operations**
-- **Blending decisions**: Predict quality of wine blends before physical mixing
-- **Inventory management**: Prioritize which wines to bottle/age based on predicted quality
-- **Cost optimization**: Determine appropriate pricing tiers based on expected quality
-
-#### 3. **Supply Chain & Distribution**
-- **Supplier screening**: Evaluate potential wine purchases using lab reports
-- **Quality assurance**: Verify supplier claims with independent predictions
-- **Market positioning**: Guide marketing strategy based on predicted quality scores
-
-#### 4. **Research & Development**
-- **Recipe development**: Test hypothetical formulations without physical production
-- **Feature analysis**: Understand which chemical properties drive quality
-- **Process optimization**: Identify target chemical profiles for desired quality levels
+- Wine Production & Quality Control (Monitoring quality trends in real-time, Batch evaluation, Quality gates)
+- Winery Operations (Blending decisions, Inventory management, Cost optimization)
+- Supply Chain & Distribution (Supplier screening, Quality assurance, Market positioning)
+- Research & Development (Recipe development, Feature analysis, Process optimization)
 
 ### Why This Approach?
 
