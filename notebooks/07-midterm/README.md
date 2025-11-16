@@ -2,7 +2,31 @@
 
 A machine learning service that predicts the quality of red wine based on physicochemical properties using XGBoost regression.
 
-## Problem
+## TLDR;
+Call the API with the following JSON payload:
+
+```bash
+curl -X 'POST' \
+  'https://wine-quality-predictor-933028008008.us-central1.run.app/predict' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "fixed_acidity": 7.6,
+    "volatile_acidity": 0.9,
+    "citric_acid": 0.06,
+    "residual_sugar": 2.5,
+    "chlorides": 0.079,
+    "free_sulfur_dioxide": 5.0,
+    "total_sulfur_dioxide": 10.0,
+    "density": 0.9967,
+    "pH": 3.39,
+    "sulphates": 0.56,
+    "alcohol": 9.8
+  }'
+```
+will give you a quality score of 5.
+
+## The long version
 
 ### The Challenge
 
